@@ -47,5 +47,13 @@ cd [NOME_DO_DIRETÓRIO]
 
 docker-compose up --build -d
 
+---
+
+sudo firewall-cmd --list-all
+
+sudo firewall-cmd --zone=public --add-port=5000/tcp --permanent
+
+sudo firewall-cmd --reload
+
 
 
