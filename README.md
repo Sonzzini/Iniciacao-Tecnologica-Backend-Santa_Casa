@@ -49,11 +49,22 @@ docker-compose up --build -d
 
 ---
 
-sudo firewall-cmd --list-all
+sudo yum install iptables-services
 
-sudo firewall-cmd --zone=public --add-port=5000/tcp --permanent
+sudo iptables-save > /etc/sysconfig/iptables
 
-sudo firewall-cmd --reload
+sudo systemctl enable iptables
+
+sudo systemctl start iptables
+
+---
+
+sudo iptables -I INPUT -p tcp --dport 5000 -j ACCEPT
+
+sudo iptables-save | sudo tee /etc/sysconfig/iptables
+
+sudo systemctl restart iptables
+
 
 
 
