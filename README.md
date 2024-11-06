@@ -1,8 +1,9 @@
-# SANTACASA
+# Iniciação Tecnológica - Mackenzie | Santa Casa
+#### Backend para registro, armazenamento de radiografias e devolução de predição de idade óssea a partir de uma Inteligência Artificial
 
 
-- passos AWS:
-  
+
+## Passos utilizados no sistema AWS
 ssh -i ~/.ssh/labsuser.pem ec2-user@54.146.194.209
 
 sudo su
